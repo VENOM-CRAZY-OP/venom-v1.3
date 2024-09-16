@@ -8,10 +8,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # insert your Telegram bot token here
-bot = telebot.TeleBot('7543594921:AAEb0Qs9usGggKGl0Q-iZ-JimDzJhtv01e0')
+bot = telebot.TeleBot('7254663003:AAEc6e50A6SK_n2GCJRfX7qfFLeprTJguO8')
 
 # Admin user IDs
-admin_id = ["5894556386"]
+admin_id = ["5947088703"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -48,7 +48,7 @@ allowed_user_ids = read_users()
 
 # Function to log command to the file
 def log_command(user_id, target, port, time):
-    admin_id = ["5588464519"]
+    admin_id = ["5947088703"]
     user_info = bot.get_chat(user_id)
     if user_info.username:
         username = "@" + user_info.username
@@ -307,8 +307,8 @@ def handle_bgmi(message):
             target = command[1]
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
-            if time > 600:
-                response = "Error: Time interval must be less than 600."
+            if time > 900:
+                response = "Error: Time interval must be less than 900."
             else:
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
@@ -383,8 +383,8 @@ def welcome_rules(message):
     user_name = message.from_user.first_name
     response = f'''{user_name} Please Follow These Rules ⚠️:
 
-1. Dont Run Too Many Attacks !! Cause A Ban From Bot
-2. Dont Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot.
+1. Run Too Many Attacks !! Cause A Ban From Bot
+2. Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot.
 3. MAKE SURE YOU JOINED https://t.me/venomcha7 OTHERWISE NOT WORK
 4. We Daily Checks The Logs So Follow these rules to avoid Ban!!'''
     bot.reply_to(message, response)
@@ -395,8 +395,8 @@ def welcome_plan(message):
     response = f'''{user_name}, Brother Only 1 Plan Is Powerfull Then Any Other Ddos !!:
 
 Vip 🌟 :
--> Attack Time : 300 (S)
-> After Attack Limit : 10 sec
+-> Attack Time : 900 (S)
+> After Attack Limit : 1 sec
 -> Concurrents Attack : 5
 
 Pr-ice List💸 :
